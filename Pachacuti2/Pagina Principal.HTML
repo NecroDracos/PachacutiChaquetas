@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="Style.css">
+<body>
+ <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <img src="fotos/logo.png" alt="PACHACUTI - Chaquetas Artesanales" class="logo-img">
+                </a>
+                 <!-- Search Bar - Desktop -->
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                        <input type="search" placeholder="Buscar diseños, estilos..." class="search-input">
+                    </div>
+                </div>
+                <!-- Navigation - Desktop -->
+                <nav class="nav-desktop">
+                    <a href="./app/galeria.html" class="nav-link">Galería</a>
+                    <a href="./app/pedidos.html" class="nav-link">Pedidos</a>
+                    <a href="./app/contacto.html" class="nav-link">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Chaquetas Únicas, <span class="text-primary">Hechas a Mano</span>
+                </h1>
+                <p class="hero-description">
+                    Cada chaqueta cuenta una historia. Déjanos crear la tuya con diseños personalizados que reflejan tu estilo único y personalidad.
+                </p>
+                <div class="hero-buttons">
+                    <a href="pedidos.html" class="btn btn-primary">Personalizar Mi Chaqueta</a>
+                    <a href="galeria.html" class="btn btn-outline">Ver Galería</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestras Creaciones</h2>
+                <p class="section-description">
+                    Descubre la magia de la personalización a través de nuestros diseños únicos
+                </p>
+            </div>
+            
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="fotos/persona2.jpeg" alt="Persona con chaqueta negra personalizada con diseño de anime" class="carousel-image">
+                        <div class="carousel-overlay">
+                            <h3 class="carousel-title">Diseños de Anime</h3>
+                            <p class="carousel-desc">Parches únicos inspirados en la cultura pop japonesa</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="fotos/persona4.jpeg" alt="Chaqueta negra con parche de anime en entorno urbano" class="carousel-image">
+                        <div class="carousel-overlay">
+                            <h3 class="carousel-title">Arte Urbano</h3>
+                            <p class="carousel-desc">Expresión personal en espacios de la ciudad</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="fotos/persona1.jpeg" alt="Mujer con chaqueta de mezclilla con diseño de jaguar colorido" class="carousel-image">
+                        <div class="carousel-overlay">
+                            <h3 class="carousel-title">Jaguar Místico</h3>
+                            <p class="carousel-desc">Diseños inspirados en la fauna latinoamericana</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="fotos/persona3.jpeg" alt="Chaqueta denim con jaguar alado en entorno natural" class="carousel-image">
+                        <div class="carousel-overlay">
+                            <h3 class="carousel-title">Naturaleza Salvaje</h3>
+                            <p class="carousel-desc">Arte que conecta con la esencia de la naturaleza</p>
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <button class="carousel-btn carousel-prev" onclick="prevSlide()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15,18 9,12 15,6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-next" onclick="nextSlide()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9,18 15,12 9,6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Dots Indicator -->
+                <div class="carousel-dots">
+                    <button class="dot active" onclick="currentSlide(1)"></button>
+                    <button class="dot" onclick="currentSlide(2)"></button>
+                    <button class="dot" onclick="currentSlide(3)"></button>
+                    <button class="dot" onclick="currentSlide(4)"></button>
+                </div>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por Qué Elegirnos?</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Hecho con Amor</h3>
+                    <p class="feature-desc">Cada pieza es creada con pasión y dedicación por nuestros artesanos expertos</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Diseño Único</h3>
+                    <p class="feature-desc">Tu chaqueta será completamente única, diseñada específicamente para ti</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Colaboración</h3>
+                    <p class="feature-desc">Trabajamos contigo en cada paso para crear la chaqueta perfecta</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9l6 6 6-6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Calidad Premium</h3>
+                    <p class="feature-desc">Utilizamos solo los mejores materiales y técnicas artesanales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="script.js"></script>
+</body>
+</html>

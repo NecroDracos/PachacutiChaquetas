@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - PACHACUTI</title>
+   <link rel="stylesheet" href="../stylesbtn.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../Pagina Principal.HTML" class="logo">
+                    <img src="../fotos/logo.png" alt="PACHACUTI Logo" class="logo-image">
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="/app/galeria.html" class="nav-link">Galería</a>
+                    <a href="/app/pedidos.html" class="nav-link">Pedidos</a>
+                    <a href="/app/contacto.html" class="nav-link">Contacto</a>
+                </nav>                     
+            </div>
+        </div>
+       
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="container">
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM18 18l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input type="search" placeholder="Buscar diseños, estilos..." class="search-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="gallery-page">
+                <div class="page-header">
+                    <h1 class="page-title">Galería de Diseños</h1>
+                    <p class="page-description">Explora nuestra colección de chaquetas personalizadas. Cada pieza es única y cuenta una historia.</p>
+                </div>
+
+                <!-- Filter Buttons -->
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="pintado">Pintados</button>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="pintado">
+                        <img src="../fotos/persona1.jpeg" alt="Persona joven con chaqueta personalizada terracota" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Diseño Terracota</h3>
+                            <p class="gallery-description">Chaqueta pintada a mano con tonos cálidos</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="pintado">
+                        <img src="../fotos/persona4.jpeg" alt="Pareja con chaquetas matching personalizadas" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Matching Couple</h3>
+                            <p class="gallery-description">Set de chaquetas coordinadas</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="pintado">
+                        <img src="../fotos/persona2.jpeg" alt="Artista con chaqueta pintada a mano" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Arte Cálido</h3>
+                            <p class="gallery-description">Pintura artística en tonos terracota</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="pintado">
+                        <img src="../fotos/persona3.jpeg" alt="Artesano trabajando en chaqueta" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title">Proceso Artesanal</h3>
+                            <p class="gallery-description">Detrás del arte</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="gallery-cta">
+                    <h2 class="cta-title">¿Listo para crear tu diseño?</h2>
+                    <p class="cta-description">Cada chaqueta es una obra de arte única. Comienza tu pedido personalizado hoy.</p>
+                    <a href="pedidos.html" class="btn btn-primary btn-lg">Hacer un Pedido</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">PACHACUTI</h3>
+                    <p class="footer-text">Chaquetas personalizadas con alma artesanal</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Navegación</h4>
+                    <a href="galeria.html" class="footer-link">Galería</a>
+                    <a href="pedidos.html" class="footer-link">Pedidos</a>
+                    <a href="contacto.html" class="footer-link">Contacto</a>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contacto</h4>
+                    <p class="footer-text">+57 3016216795</p>
+                    <p class="footer-text">Bogotá, Colombia</p>
+                    <p class="footer-text">contacto@pachacuti.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PACHACUTI. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scriptbtn.js"></script>
+    <script>
+        // Gallery filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

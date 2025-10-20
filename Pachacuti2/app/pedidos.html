@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos - PACHACUTI</title>
+    <link rel="stylesheet" href="../stylesbtn.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../Pagina Principal.HTML" class="logo">
+                    <img src="../fotos/logo.png" alt="PACHACUTI Logo" class="logo-image">
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="/app/galeria.html" class="nav-link">Galería</a>
+                    <a href="/app/pedidos.html" class="nav-link">Pedidos</a>
+                    <a href="/app/contacto.html" class="nav-link">Contacto</a>
+                </nav>     
+            </div>
+                
+        </div>
+      
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="container">
+            <div class="search-wrapper">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM18 18l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input type="search" placeholder="Buscar diseños, estilos..." class="search-input">
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="order-page">
+                <div class="page-header">
+                    <h1 class="page-title">Personaliza Tu Chaqueta</h1>
+                    <p class="page-description">Completa el formulario para comenzar tu pedido personalizado. Nuestro equipo se pondrá en contacto contigo para finalizar los detalles.</p>
+                </div>
+
+                <form class="order-form" id="orderForm">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h2 class="form-section-title">Información Personal</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName" class="form-label">Nombre completo *</label>
+                                <input type="text" id="fullName" name="fullName" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="orderEmail" class="form-label">Correo electrónico *</label>
+                                <input type="email" id="orderEmail" name="orderEmail" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="orderPhone" class="form-label">Teléfono *</label>
+                                <input type="tel" id="orderPhone" name="orderPhone" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="form-label">Ciudad *</label>
+                                <input type="text" id="city" name="city" class="form-input" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jacket Details -->
+                    <div class="form-section">
+                        <h2 class="form-section-title">Detalles de la Chaqueta</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="jacketType" class="form-label">Tipo de chaqueta *</label>
+                                <select id="jacketType" name="jacketType" class="form-input" required>
+                                    <option value="">Selecciona un tipo</option>
+                                    <option value="denim">Denim</option>
+                                    <option value="cuero">Cuero</option>
+                                    <option value="bomber">Bomber</option>
+                                    <option value="varsity">Varsity</option>
+                                    <option value="trucker">Trucker</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="size" class="form-label">Talla *</label>
+                                <select id="size" name="size" class="form-input" required>
+                                    <option value="">Selecciona una talla</option>
+                                    <option value="xs">XS</option>
+                                    <option value="s">S</option>
+                                    <option value="m">M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                    <option value="xxl">XXL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="baseColor" class="form-label">Color base *</label>
+                            <select id="baseColor" name="baseColor" class="form-input" required>
+                                <option value="">Selecciona un color</option>
+                                <option value="negro">Negro</option>
+                                <option value="azul">Azul</option>
+                                <option value="marron">Marrón</option>
+                                <option value="verde">Verde</option>
+                                <option value="gris">Gris</option>
+                                <option value="beige">Beige</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Customization -->
+                    <div class="form-section">
+                        <h2 class="form-section-title">Personalización</h2>
+                        <div class="form-group">
+                            <label class="form-label">Tipo de personalización *</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="customization" value="bordado">
+                                    <span>Bordado</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="customization" value="pintado">
+                                    <span>Pintado a mano</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="customization" value="parches">
+                                    <span>Parches</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="customization" value="grabado">
+                                    <span>Grabado</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="designDescription" class="form-label">Describe tu diseño *</label>
+                            <textarea id="designDescription" name="designDescription" rows="6" class="form-input" placeholder="Cuéntanos sobre tu visión: colores, símbolos, texto, ubicación del diseño, etc." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="referenceImages" class="form-label">Imágenes de referencia (opcional)</label>
+                            <input type="file" id="referenceImages" name="referenceImages" class="form-input" multiple accept="image/*">
+                            <p class="form-help-text">Puedes subir imágenes de inspiración o bocetos de tu diseño</p>
+                        </div>
+                    </div>
+
+                    <!-- Budget and Timeline -->
+                    <div class="form-section">
+                        <h2 class="form-section-title">Presupuesto y Tiempo</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="budget" class="form-label">Presupuesto aproximado</label>
+                                <select id="budget" name="budget" class="form-input">
+                                    <option value="">Selecciona un rango</option>
+                                    <option value="100-200">$100,000 - $200,000 COP</option>
+                                    <option value="200-300">$200,000 - $300,000 COP</option>
+                                    <option value="300-500">$300,000 - $500,000 COP</option>
+                                    <option value="500+">Más de $500,000 COP</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="deadline" class="form-label">¿Cuándo lo necesitas?</label>
+                                <input type="date" id="deadline" name="deadline" class="form-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Notes -->
+                    <div class="form-section">
+                        <div class="form-group">
+                            <label for="additionalNotes" class="form-label">Notas adicionales</label>
+                            <textarea id="additionalNotes" name="additionalNotes" rows="4" class="form-input" placeholder="Cualquier información adicional que quieras compartir"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-lg">Enviar Pedido</button>
+                        <p class="form-help-text">* Campos obligatorios. Te contactaremos en 24-48 horas para confirmar tu pedido.</p>
+                    </div>
+                </form>
+
+                <!-- Process Info -->
+                <div class="process-info">
+                    <h2 class="process-title">¿Cómo funciona?</h2>
+                    <div class="process-steps">
+                        <div class="process-step">
+                            <div class="process-number">1</div>
+                            <h3 class="process-step-title">Envía tu pedido</h3>
+                            <p class="process-step-text">Completa el formulario con todos los detalles de tu diseño</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-number">2</div>
+                            <h3 class="process-step-title">Confirmación</h3>
+                            <p class="process-step-text">Te contactamos para confirmar detalles y presupuesto</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-number">3</div>
+                            <h3 class="process-step-title">Creación</h3>
+                            <p class="process-step-text">Nuestros artesanos trabajan en tu chaqueta única</p>
+                        </div>
+                        <div class="process-step">
+                            <div class="process-number">4</div>
+                            <h3 class="process-step-title">Entrega</h3>
+                            <p class="process-step-text">Recibe tu chaqueta personalizada en tu puerta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">PACHACUTI</h3>
+                    <p class="footer-text">Chaquetas personalizadas con alma artesanal</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Navegación</h4>
+                    <a href="galeria.html" class="footer-link">Galería</a>
+                    <a href="pedidos.html" class="footer-link">Pedidos</a>
+                    <a href="contacto.html" class="footer-link">Contacto</a>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contacto</h4>
+                    <p class="footer-text">+57 3016216795</p>
+                    <p class="footer-text">Bogotá, Colombia</p>
+                    <p class="footer-text">contacto@pachacuti.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PACHACUTI. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Order form submission
+        document.getElementById('orderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get customization checkboxes
+            const customizations = Array.from(document.querySelectorAll('input[name="customization"]:checked'))
+                .map(cb => cb.value);
+            
+            if (customizations.length === 0) {
+                alert('Por favor selecciona al menos un tipo de personalización');
+                return;
+            }
+            
+            alert('¡Gracias por tu pedido! Nos pondremos en contacto contigo pronto para confirmar los detalles.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
